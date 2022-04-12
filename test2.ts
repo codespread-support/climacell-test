@@ -15,3 +15,8 @@ export const track:any = (event:string, data:any) => {
 		window.analytics.track(event, { ...data });
 	}
 };
+export const track:any = (event:string, data:any) => {
+	if (typeof window !== 'undefined' && window.analytics) {
+		window.analytics.track(event, { ...data });
+	}
+};
